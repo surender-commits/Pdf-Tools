@@ -1,0 +1,44 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\Remove PDF Passwords]
+@="Remove PDF Passwords"
+"Icon"="cmd.exe"
+"MUIVerb"="Remove PDF Passwords"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\Remove PDF Passwords\command]
+@="\"C:\\Pdf Tools\\Remove-Pass.bat\" \"%1\""
+
+
+; === Parent context menu for PDF files ===
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\Compress PDF]
+"Position"="Middle"
+"Icon"="cmd.exe"
+"SubCommands"=""
+
+; === Sub-command: Basic Compression ===
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\Compress PDF\shell\01 Basic]
+@="&01 Basic"
+"Icon"="cmd.exe"
+"MUIVerb"="01 Basic"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\Compress PDF\shell\01 Basic\command]
+@="\"C:\\Pdf Tools\\Compress-Pdf-Basic.bat\" \"%1\""
+
+; === Sub-command: Standard Compression ===
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\Compress PDF\shell\02 Standard]
+@="&02 Standard"
+"Icon"="cmd.exe"
+"MUIVerb"="02 Standard"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\Compress PDF\shell\02 Standard\command]
+@="\"C:\\Pdf Tools\\Compress-Pdf-Standard.bat\" \"%1\""
+
+
+; === Sub-command: Compress to 1 MB ===
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\Compress PDF\shell\03 OneMB]
+@="&03 1024 Kb or 1 Mb"
+"Icon"="cmd.exe"
+"MUIVerb"="03 1024 Kb or 1 Mb"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\Compress PDF\shell\03 OneMB\command]
+@="\"C:\\Pdf Tools\\Compress-Pdf-1024Kb.bat\" \"%1\""

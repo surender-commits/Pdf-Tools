@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\Remove PDF Passwords]
+
+; === Remove "Compress PDF" parent and all sub-menus ===
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\Compress PDF]
